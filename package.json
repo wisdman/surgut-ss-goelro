@@ -1,0 +1,21 @@
+{
+  "name": "surgut-ss-goelro",
+  "version": "0.1.0",
+  "description": "100 лет плану ГОЭЛРО",
+  "repository": "https://github.com/lit3d/surgut-ss-goelro",
+  "homepage": "https://github.com/lit3d/surgut-ss-goelro",
+  "bugs": "https://github.com/lit3d/surgut-ss-goelro/issues",
+  "author": "Lit3D team <team@lit3d.io> (https://github.com/lit3d)",
+  "contributors": [
+    "Wisdman <wisdman@wisdman.io> (https://github.com/wisdman)",
+    "Yulia Fedyakina <yuliaf@lit3d.io> (https://github.com/litmeup)"
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "ws"
+  },
+  "devDependencies": {
+    "local-web-server": "^4.2.1"
+  }
+}
