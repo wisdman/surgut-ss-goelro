@@ -1,3 +1,8 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
 .bg {
     background-image: url(../../assets/images/body-bg-frame.png);
     background-repeat: no-repeat;
@@ -14,6 +19,16 @@
     height: 100%;
 }
 
+.article__header {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #4D4D4D;
+}
+
 .article__list {
     list-style: none;
     margin: 0;
@@ -26,7 +41,8 @@
     grid-template-areas:
       "aa aa bb bb gg gg"
       "zz zz zz jj jj jj";
-    margin: 100px 200px;
+    margin: 100px 300px;
+    height: 200px;
 }
 
 .article__list li {
@@ -41,7 +57,6 @@
     display: block;
     height: 338px;
     width: 338px;
-    margin: 0 auto;
     position: relative;
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     overflow: hidden;
@@ -62,16 +77,28 @@
 
 .article__list li:nth-child(1) {
     grid-area: aa;
+    display: flex;
+    justify-content: flex-start;
 }
 .article__list li:nth-child(2) {
     grid-area: bb;
+    display: flex;
+    justify-content: center;
 }
 .article__list li:nth-child(3) {
     grid-area: gg;
+    display: flex;
+    justify-content: flex-end;
 }
 .article__list li:nth-child(4) {
     grid-area: zz;
+    transform: translateX(80px) translateY(-80px);
+    display: flex;
+    justify-content: center;
 }
 .article__list li:nth-child(5) {
     grid-area: jj;
+    transform: translateX(-80px) translateY(-80px);
+    display: flex;
+    justify-content: center;
 }
