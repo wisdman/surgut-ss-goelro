@@ -26,12 +26,12 @@ body, html {
     justify-content: center;
     padding: 20px;
     background: rgba(255,255,255,0.5);
-    height: 122px;
+    height: 90px;
 }
 
 .article__header img {
     height: 70px;
-    margin-top: 26px;
+    margin-top: 13px;
 }
 
 h1 {
@@ -155,7 +155,7 @@ h1 {
     display: flex;
     flex-direction: row;
     column-gap: 50px;
-    margin: 50px;
+    margin: 100px;
 }
 
 .article__image {
@@ -172,13 +172,30 @@ h1 {
 .article__text {
     font-size: 30px;
     font-family: "PT Sans";
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.8);
     padding: 50px;
     width: auto;
     border-radius: 0 0 100px 0;
 }
 
+.article__text h1 {
+    color: #065A93;
+    font-size: 40px;
+    font-family: "PT Sans";
+    text-align: left;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 50px;
+    letter-spacing: 0;
+}
+
 
 .article--inner {
+    background-image: url(../../assets/gres1/bg2.jpg);
+    padding-top: 0;
+}
 
+.article--inner .article__header img {
+    height: 47px;
+    margin-top: 26px;
 }
