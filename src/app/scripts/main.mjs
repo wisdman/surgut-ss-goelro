@@ -1,6 +1,6 @@
 
-import { MainPageComponent } from "./components/index.mjs"
+import "./components/index.mjs"
 
-void async function main() {
-  new MainPageComponent()
-}()
+// void async function main() {
+//   new MainPageComponent()
+// }()

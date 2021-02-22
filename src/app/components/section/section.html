@@ -1,0 +1,106 @@
+<template id="section-1">
+  <!-- Газпром энергостыт - Тюмень -->
+  <link rel="stylesheet" type="text/css" href="${base}section-1.css">
+  <div class="section__header">
+    <img class="section__header-logo" src="${base}assets/section-1/logo.svg" width="354" height="213">
+  </div>
+
+  <div class="section__content-cell">
+    <div class="section__content-box-wrapper">
+      <div class="section__content-box">
+        <div class="section__content-title">
+          <slot name="title"></slot>
+        </div>
+        <div class="section__content">
+          <slot name="content"></slot>
+        </div>
+      </div>
+      <div class="section__content-item-title">
+        <slot name="item-title"></slot>
+      </div>
+      <ss-hand class="section__ss-hand"></ss-hand>
+      <a href="#" class="section__back"><span>&larr;</span></a>
+    </div>
+    <div class="section__content-logo-box">
+      <a class="section__content-logo-link" href="#">
+        <img class="section__content-logo" src="${base}assets/section-1/logo.svg" width="354" height="213">
+      </a>
+    </div>
+  </div>
+  
+  <div class="section__main-cell">
+    <slot name="main"></slot>
+  </div>
+</template>
+
+<template id="section-2">
+  <!-- Россети -->
+  <link rel="stylesheet" type="text/css" href="${base}section-2.css">
+  <div class="header"></div>
+  <div class="wrapper">
+    <div classs="content">
+      <slot></slot>
+    </div>
+    <img class="logo" src="${base}assets/section-2/logo-w.svg" width="670" height="210">
+  </div>
+</template>
+
+<template id="section-3">
+  <!-- ЮниПром -->
+  <link rel="stylesheet" type="text/css" href="${base}section-3.css">
+  <div class="section__plug"></div> 
+  <img class="section__logo" src="${base}assets/section-3/logo.svg" width="354" height="213">
+  <div class="section__plug"></div>
+
+  <div class="section__content-wrapper">
+    <slot name="content"></slot>
+  </div>
+
+  <svg class="section__content--svg-clipPath" height="0" width="0">
+    <defs>
+      <clipPath id="svgPath-3">
+        <path id="path37" class="cls-1" d="M1641.17,0H47.82A47.92,47.92,0,0,0,0,47.84V819.08H1337.57c25.77-181.93,169.59-325.83,351.42-351.61C1685.14,22,1708.8,10.1,1641.17,0Z"></path>
+      </clipPath>
+    </defs>
+  </svg>
+  
+  <div class="section__donut">
+    <svg class="section__donut-svg" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="30" fill="transparent" stroke="#0082C9" stroke-width="38"></circle>
+      <circle cx="50" cy="50" r="30" fill="transparent" stroke="#005885" stroke-width="38"
+              stroke-dasharray="40 60" stroke-dashoffset="25"></circle>
+      <circle cx="50" cy="50" r="30" fill="transparent" stroke="#00B1EB" stroke-width="38"
+              stroke-dasharray="20 80" stroke-dashoffset="85"></circle>
+      <circle cx="50" cy="50" r="30" fill="transparent" stroke="#93D5F6" stroke-width="38"
+              stroke-dasharray="30 70" stroke-dashoffset="65"></circle>
+    </svg>
+  </div>
+
+  <div class="section__header">
+    <img class="section__header-logo" src="${base}assets/section-3/logo-w.svg" width="354" height="213">
+  </div>
+
+  <div class="section__main">
+    <slot name="main"></slot>
+  </div>
+</template>
+
+<template id="section-4">
+  <!-- ГРЭС-1 / ОГК-2 -->
+  <link rel="stylesheet" type="text/css" href="${base}section-4.css">
+  <div class="section__header">
+    <img class="section__header-logo" src="${base}assets/section-4/logo.svg" width="593" height="46">
+    <ss-smoke class="section__header-smoke"></ss-smoke>
+  </div>
+</template>
+
+<template id="section-5">
+  <!-- СГЭС -->
+  <link rel="stylesheet" type="text/css" href="${base}section-5.css">
+  <img class="section__logo" src="${base}assets/section-5/logo.svg" width="383" height="223">
+  <div class="section__content-wrapper">
+    <div class="section__content">
+      <!-- <slot></slot> -->
+    </div>
+  </div>
+</template>

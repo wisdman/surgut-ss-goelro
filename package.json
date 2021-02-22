@@ -13,7 +13,7 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "start": "ws"
+    "start": "ws -d src/app/ --spa index.html"
   },
   "devDependencies": {
     "local-web-server": "^4.2.1"

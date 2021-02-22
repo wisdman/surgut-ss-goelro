@@ -3,11 +3,200 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" type="text/css" href="styles/index.css">
-  <script type="module" src="scripts/main.mjs"></script>
+  <link rel="stylesheet" type="text/css" href="/styles/index.css">
+  <script type="module" src="/components/index.mjs"></script>
   <title>100 лет плану ГОЭЛРО</title>
 </head>
 <body>
-  <ss-main-page></ss-main-page>
+  <ss-router>
+    <!-- Личности -->
+    <template data-route="/ss-1" data-title="SmartScreen I">
+      <ss-main-page ></ss-main-page>
+    </template>
+    <template data-route="/ss-1/section-1" data-title="SmartScreen I - Section 1">
+      <!-- Газпром энергостыт - Тюмень -->
+      <ss-section data-section="1">
+        <link rel="stylesheet" type="text/css" href="/content/ss-1/section-1.css">
+        <ss-content data-html="/content/ss-1/section-1.html"></ss-content>
+      </ss-section>
+    </template>
+    <template data-route="/ss-1/section-2" data-title="SmartScreen I - Section 2">
+      <!-- Россети -->
+      <ss-section data-section="2">
+        <ss-content data-html="/content/ss-1/section-2.html" data-css="/content/ss-1/section-2.css"></ss-content>
+      </ss-section>
+    </template>
+    <template data-route="/ss-1/section-3" data-title="SmartScreen I - Section 3">
+      <!-- ЮниПром -->
+      <ss-section data-section="3">
+        <ss-content data-html="/content/ss-1/section-3.html" data-css="/content/ss-1/section-3.css"></ss-content>
+      </ss-section>
+    </template>
+    <template data-route="/ss-1/section-4" data-title="SmartScreen I - Section 4">
+      <!-- ГРЭС-1 / ОГК-2 -->
+      <ss-section data-section="4">
+        <ss-content data-html="/content/ss-1/section-4.html" data-css="/content/ss-1/section-4.css"></ss-content>
+      </ss-section>
+    </template>
+    <template data-route="/ss-1/section-5" data-title="SmartScreen I - Section 5">
+      <!-- СГЭС -->
+      <ss-section data-section="5">
+        <ss-content data-html="/content/ss-1/section-5.html" data-css="/content/ss-1/section-5.css"></ss-content>
+      </ss-section>
+    </template>
+
+    <!-- Югра вертикальный -->
+    <template data-route="/ss-2" data-title="SmartScreen II">
+      <ss-main-page ></ss-main-page>
+    </template>
+    <template data-route="/ss-2/section-1" data-title="SmartScreen II - Section 1">
+      <!-- Газпром энергостыт - Тюмень -->
+      <ss-section data-section="1"></ss-section>
+    </template>
+    <template data-route="/ss-2/section-2" data-title="SmartScreen II - Section 2">
+      <!-- Россети -->
+      <ss-section data-section="2"></ss-section>
+    </template>
+    <template data-route="/ss-2/section-3" data-title="SmartScreen II - Section 3">
+      <!-- ЮниПром -->
+      <ss-section data-section="3"></ss-section>
+    </template>
+    <template data-route="/ss-2/section-4" data-title="SmartScreen II - Section 4">
+      <!-- ГРЭС-1 / ОГК-2 -->
+      <ss-section data-section="4"></ss-section>
+    </template>
+    <template data-route="/ss-2/section-5" data-title="SmartScreen II - Section 5">
+      <!-- СГЭС -->
+      <ss-section data-section="5"></ss-section>
+    </template>
+
+    <!-- Визитака -->
+    <template data-route="/ss-3" data-title="SmartScreen III">
+      <ss-main-page ></ss-main-page>
+    </template>
+    <template data-route="/ss-3/section-1" data-title="SmartScreen III - Section 1">
+      <!-- Газпром энергостыт - Тюмень -->
+      <ss-section data-section="1"></ss-section>
+    </template>
+    <template data-route="/ss-3/section-2" data-title="SmartScreen III - Section 2">
+      <!-- Россети -->
+      <ss-section data-section="2"></ss-section>
+    </template>
+    <template data-route="/ss-3/section-3" data-title="SmartScreen III - Section 3">
+      <!-- ЮниПром -->
+      <ss-section data-section="3"></ss-section>
+    </template>
+    <template data-route="/ss-3/section-4" data-title="SmartScreen III - Section 4">
+      <!-- ГРЭС-1 / ОГК-2 -->
+      <ss-section data-section="4"></ss-section>
+    </template>
+    <template data-route="/ss-3/section-5" data-title="SmartScreen III - Section 5">
+      <!-- СГЭС -->
+      <ss-section data-section="5"></ss-section>
+    </template>
+
+    <!-- Инфографика -->
+    <template data-route="/ss-4" data-title="SmartScreen IV">
+      <ss-main-page ></ss-main-page>
+    </template>
+    <template data-route="/ss-4/section-1" data-title="SmartScreen IV - Section 1">
+      <!-- Газпром энергостыт - Тюмень -->
+      <ss-section data-section="1"></ss-section>
+    </template>
+    <template data-route="/ss-4/section-2" data-title="SmartScreen IV - Section 2">
+      <!-- Россети -->
+      <ss-section data-section="2"></ss-section>
+    </template>
+    <template data-route="/ss-4/section-3" data-title="SmartScreen IV - Section 3">
+      <!-- ЮниПром -->
+      <ss-section data-section="3"></ss-section>
+    </template>
+    <template data-route="/ss-4/section-4" data-title="SmartScreen IV - Section 4">
+      <!-- ГРЭС-1 / ОГК-2 -->
+      <ss-section data-section="4"></ss-section>
+    </template>
+    <template data-route="/ss-4/section-5" data-title="SmartScreen IV - Section 5">
+      <!-- СГЭС -->
+      <ss-section data-section="5"></ss-section>
+    </template>
+    
+    <!-- Факты -->
+    <template data-route="/ss-5" data-title="SmartScreen V">
+      <ss-main-page ></ss-main-page>
+    </template>
+    <template data-route="/ss-5/section-1" data-title="SmartScreen V - Section 1">
+      <!-- Газпром энергостыт - Тюмень -->
+      <ss-section data-section="1">
+        <link rel="stylesheet" type="text/css" href="/content/ss-5/section-1.css">
+        <ss-content data-html="/content/ss-5/section-1.html"></ss-content>
+      </ss-section>
+    </template>
+    <template data-route="/ss-5/section-2" data-title="SmartScreen V - Section 2">
+      <!-- Россети -->
+      <ss-section data-section="2"></ss-section>
+    </template>
+    <template data-route="/ss-5/section-3" data-title="SmartScreen V - Section 3">
+      <!-- ЮниПром -->
+      <ss-section data-section="3"></ss-section>
+    </template>
+    <template data-route="/ss-5/section-4" data-title="SmartScreen V - Section 4">
+      <!-- ГРЭС-1 / ОГК-2 -->
+      <ss-section data-section="4"></ss-section>
+    </template>
+    <template data-route="/ss-5/section-5" data-title="SmartScreen V - Section 5">
+      <!-- СГЭС -->
+      <ss-section data-section="5"></ss-section>
+    </template>
+    
+    <!-- Лента времени -->
+    <template data-route="/ss-6" data-title="SmartScreen VI">
+      <ss-main-page ></ss-main-page>
+    </template>
+    <template data-route="/ss-6/section-1" data-title="SmartScreen VI - Section 1">
+      <!-- Газпром энергостыт - Тюмень -->
+      <ss-section data-section="1"></ss-section>
+    </template>
+    <template data-route="/ss-6/section-2" data-title="SmartScreen VI - Section 2">
+      <!-- Россети -->
+      <ss-section data-section="2"></ss-section>
+    </template>
+    <template data-route="/ss-6/section-3" data-title="SmartScreen VI - Section 3">
+      <!-- ЮниПром -->
+      <ss-section data-section="3"></ss-section>
+    </template>
+    <template data-route="/ss-6/section-4" data-title="SmartScreen VI - Section 4">
+      <!-- ГРЭС-1 / ОГК-2 -->
+      <ss-section data-section="4"></ss-section>
+    </template>
+    <template data-route="/ss-6/section-5" data-title="SmartScreen VI - Section 5">
+      <!-- СГЭС -->
+      <ss-section data-section="5"></ss-section>
+    </template>
+    
+    <!-- Коллектив -->
+    <template data-route="/ss-7" data-title="SmartScreen VII">
+      <ss-main-page ></ss-main-page>
+    </template>
+    <template data-route="/ss-7/section-1" data-title="SmartScreen VII - Section 1">
+      <!-- Газпром энергостыт - Тюмень -->
+      <ss-section data-section="1"></ss-section>
+    </template>
+    <template data-route="/ss-7/section-2" data-title="SmartScreen VII - Section 2">
+      <!-- Россети -->
+      <ss-section data-section="2"></ss-section>
+    </template>
+    <template data-route="/ss-7/section-3" data-title="SmartScreen VII - Section 3">
+      <!-- ЮниПром -->
+      <ss-section data-section="3"></ss-section>
+    </template>
+    <template data-route="/ss-7/section-4" data-title="SmartScreen VII - Section 4">
+      <!-- ГРЭС-1 / ОГК-2 -->
+      <ss-section data-section="4"></ss-section>
+    </template>
+    <template data-route="/ss-7/section-5" data-title="SmartScreen VII - Section 5">
+      <!-- СГЭС -->
+      <ss-section data-section="5"></ss-section>
+    </template>
+  </ss-router>
 </body>
 </html>

@@ -1,0 +1,44 @@
+:host {
+  display: flex;
+  align-items: flex-start;
+  
+  width: 73px;
+  height: 130px;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+svg {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  animation: none;
+
+  opacity: 0;
+  transition: opacity 250ms;
+}
+
+:host(.ss-hand--show) svg {
+  opacity: .9;
+
+  animation-duration: 3s;
+  animation-name: ss-hand-move;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+path {
+  fill: var(--fill, var(--color-white-font));
+}
+
+@keyframes ss-hand-move {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, 60px);
+  }
+}

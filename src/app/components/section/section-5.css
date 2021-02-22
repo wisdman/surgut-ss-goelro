@@ -1,0 +1,49 @@
+:host {
+  background-image: url(assets/section-5/bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: grid;
+  grid-template-rows: min-content 0px 1fr 30px;
+  grid-template-columns: 1fr;
+
+  justify-content: stretch;
+  align-content: stretch;
+}
+
+:host(.main) {
+  grid-template-rows: min-content 30px 1fr 30px;
+}
+
+.section__logo {
+  width: auto;
+  height: 223px;
+  max-height: 0;
+  align-self: center;
+  justify-self: center;
+  margin: 0;
+
+  transition: margin 1s, max-height 1s;
+}
+
+:host(.main) .section__logo {
+  max-height: 223px;
+  margin: 30px 0;
+}
+
+.section__content-wrapper {
+  display: contents;
+}
+
+.section__content-wrapper::before,
+.section__content-wrapper::after {
+  display: block;
+  content: "";
+  background-color: #ef7f1a;
+  mix-blend-mode: multiply;
+}
+
+.section__content {
+  background-color: #aaa;
+  mix-blend-mode: multiply;
+}

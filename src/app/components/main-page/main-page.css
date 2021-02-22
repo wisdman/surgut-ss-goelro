@@ -1,0 +1,56 @@
+:host {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: min-content min-content 1fr;
+}
+
+.lightnings {
+  position: relative;
+  grid-area: 1 / 1 / -1 / -1;
+}
+
+.logo__rmh {
+  position: relative;
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+
+.logo__100 {
+  position: relative;
+  grid-area: 1 / span 1 / span 1 / -1;
+  justify-self: end;
+}
+
+.title {
+  position: relative;
+  grid-area: 1 / 2 / span 2 / span 1;
+  display: none;
+}
+
+:host(.ss-1) .title--1,
+:host(.ss-2) .title--2,
+:host(.ss-3) .title--3,
+:host(.ss-4) .title--4,
+:host(.ss-5) .title--5,
+:host(.ss-6) .title--6,
+:host(.ss-7) .title--7 {
+  display: block;
+}
+
+.title--line {
+  grid-area: 2 / 1 / span 1 / -1;
+  justify-self: center;
+  margin-top: 60px;
+}
+
+.brands {
+  position: relative;
+  
+  grid-area: 3 / 1 / -1 / -1;
+  justify-self: center;
+  align-self: center;
+    
+  width: 1600px;
+  height: 544px;
+}
