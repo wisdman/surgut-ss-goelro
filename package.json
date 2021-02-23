@@ -15,7 +15,7 @@
   "main": "src/main.js",
   "scripts": {
     "start": "ws -d src/app/ --spa index.html",
-    "shell": "electron ."
+    "electron": "electron ."
   },
   "devDependencies": {
     "electron": "^12.0.0-beta.28",
