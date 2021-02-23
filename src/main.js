@@ -48,6 +48,7 @@ function getDisplays() {
   return screen.getAllDisplays()
                .sort(({bounds: {x: a}}, {bounds: {x: b}}) => a - b)
                .map(({bounds}, i) => ({...bounds, id: i + 1 }))
+}
 
 
 async function initViewPorts() {
