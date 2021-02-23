@@ -71,14 +71,16 @@
 
 .content__article {
   display: none;
-  width: 100%;
+  width: calc(100% - 112px);
   height: auto;
   padding-bottom: 70px;
+  margin-left: 112px;
 }
 
 .content__article.is-active {
   display: block;
 }
+
 .content__main-item {
   opacity: 1;
   transition: opacity var(--transition-duration-1_4) linear var(--transition-duration-3_4),

@@ -155,7 +155,7 @@
 
 .section__content {
   grid-area: 1 / 1 / span 1 / span 1;
-  padding-left: 312px;
+  padding-left: 200px;
   padding-right: 350px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -262,6 +262,8 @@
 
   transform: translate(0px, 0px);
   transition: transform var(--transition-duration-1_4) linear var(--transition-duration-3_4);
+
+  pointer-events: none;
 }
 
 :host(.main) .section__content-item-title {

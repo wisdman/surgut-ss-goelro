@@ -7,7 +7,7 @@
 
   <div class="section__content-cell">
     <div class="section__content-box-wrapper">
-      <div class="section__content-box">
+      <div class="section__content-box" scrollable>
         <div class="section__content-title">
           <slot name="title"></slot>
         </div>
@@ -88,10 +88,30 @@
 <template id="section-4">
   <!-- ГРЭС-1 / ОГК-2 -->
   <link rel="stylesheet" type="text/css" href="${base}section-4.css">
+  <img class="section__bg-img" src="${base}assets/section-4/bg.webp">
+  <video class="section__bg-video" src="${base}assets/section-4/bg.mp4" muted loop autoplay></video>
   <div class="section__header">
     <img class="section__header-logo" src="${base}assets/section-4/logo.svg" width="593" height="46">
-    <ss-smoke class="section__header-smoke"></ss-smoke>
   </div>
+
+  <div class="section__content-cell">
+    <div class="section__content-item-title">
+      <slot name="item-title"></slot>
+    </div>
+    <div class="section__content-box">
+      <slot name="content"></slot>
+    </div>
+  </div>
+
+  <div class="section__main-cell">
+    <slot name="main"></slot>
+  </div>
+
+  <div class="section__title-cell">
+    <slot name="title"></slot>
+  </div>
+
+  <a href="#" class="section__back"><span>&larr;</span></a>
 </template>
 
 <template id="section-5">

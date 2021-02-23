@@ -23,17 +23,28 @@ export class SectionComponent extends AbstractComponent {
     return this.dataset[DATASET_SECTION] ?? 0
   }
 
+  #scrollable = undefined
+
   connectedCallback() {
     const section = this.section
     const template = this.$(`#section-${this.section}`, { host: false })
     this.classList.add("main")
     this.root.appendChild(template.content.cloneNode(true))
     window.addEventListener("hashchange", this.#onHashChange, { capture: true })
+
+    this.#scrollable = this.$("[scrollable]", { host: false })
+    if (this.#scrollable) this.#scrollable.addEventListener("scroll", this.#onScroll, { passive: true })
   }
 
   disconnectedCallback() {
     window.removeEventListener("hashchange", this.#onHashChange, { capture: true })
+    if (this.#scrollable) this.#scrollable.removeEventListener("scroll", this.#onScroll)
     this.reset()
+  }
+
+  #onScroll = (event) => {
+    const scrollTop = this.#scrollable.scrollTop
+    requestAnimationFrame(() => this.style.setProperty("--scroll-top", scrollTop))
   }
 
   #onHashChange = (event) => {
