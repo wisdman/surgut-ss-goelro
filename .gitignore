@@ -23,8 +23,8 @@ Thumbs.db
 node_modules/
 
 ### Build artifacts ###
-**/releases/*
-!**/releases/.gitkeep
+**/build/*
+!**/build/.gitkeep
 
 ### Runtime environment ###
 *.env

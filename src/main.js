@@ -77,7 +77,6 @@ async function initViewPorts() {
 }
 
 async function initGlobalShortcut() {
-  globalShortcut.register("CommandOrControl+G", gpu)
   globalShortcut.register("CommandOrControl+Q", exit)
   globalShortcut.register("F5", reload)
 }
