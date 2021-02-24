@@ -20,10 +20,12 @@
     "release": "set NODE_ENV=production&& npm run clean && npm run pack",
     "start": "ws -d src/app/ --spa index.html"
   },
+  "dependencies": {
+    "local-web-server": "^4.2.1"
+  },
   "devDependencies": {
     "electron": "^12.0.0-beta.28",
     "electron-packager": "^15.2.0",
-    "local-web-server": "^4.2.1",
     "rimraf": "^3.0.2"
   }
 }
