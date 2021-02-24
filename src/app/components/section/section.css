@@ -77,3 +77,9 @@
   height: 140%;
   border-radius: 50%;
 }
+
+::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    height: 0; /* Remove scrollbar space */
+    background: transparent;  /* Make scrollbar invisible */
+}
