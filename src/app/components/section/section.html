@@ -98,8 +98,11 @@
     <div class="section__content-item-title">
       <slot name="item-title"></slot>
     </div>
-    <div class="section__content-box">
-      <slot name="content"></slot>
+    <div class="section__content-box" scrollable>
+      <div class="section__content">
+        <slot name="content"></slot>
+      </div>
+      <ss-hand class="section__ss-hand"></ss-hand>
     </div>
   </div>
 

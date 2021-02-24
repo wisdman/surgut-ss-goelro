@@ -1,3 +1,53 @@
 :host {
   display: contents;
+  position: relative;
+}
+
+.back-btn {
+  display: block;
+  position: fixed;
+  right: 16px;
+  top: 16px;
+  width: 100px;
+  height: 100px;
+
+  padding: 0;
+  margin: 0;
+
+  z-index: 999;
+  outline: 0;
+
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0);
+
+  border: 0 none;
+  background: transparent none;
+  background-image: url(cross-w.svg);
+  background-size: 50%;
+  background-position: 50%;
+  background-repeat: no-repeat;
+
+  filter: drop-shadow(1px 3px 5px var(--color-shadow));
+  opacity: .93;
+
+  animation-duration: 8s;
+  animation-name: back-btn-rotate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.back-btn.dark {
+  background-image: url(cross-d.svg);
+  filter: drop-shadow(1px 1px 2px rgb(0 0 0 / .1));
+}
+
+@keyframes back-btn-rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  5% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }

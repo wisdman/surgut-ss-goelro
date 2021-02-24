@@ -53,7 +53,7 @@
 }
 
 .section__content-item-title {
-  width: 300px;
+  position: relative;
 }
 
 .section__content-box {
@@ -66,12 +66,41 @@
   transform: translate(0px, 0px);
   pointer-events: auto;
 
-  transition: transform var(--transition-duration-1_4) linear var(--transition-duration-1_4);
+  transition: transform var(--transition-duration-1_4) linear var(--transition-duration-1_2); 
 }
 
 :host(.main) .section__content-box {
   transform: translate(calc(var(--screen-width) * 1px), 0px);
   transition: transform var(--transition-duration-1_3) linear 0s;
+}
+
+.section__content {
+  -webkit-text-fill-color: transparent;
+  background-color: transparent;
+  background-image:
+    linear-gradient(180deg, transparent, var(--color-black-font) 10%, var(--color-black-font)),
+    linear-gradient(0deg, transparent, var(--color-black-font) 10%, var(--color-black-font));
+  background-size: 1920px 400px;
+  background-position: 0 280px, 0 620px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+
+  transform: translate(0px, 0px);
+  opacity: 1;
+  visibility: visible;
+  
+  transition: transform var(--transition-duration-1_4) linear var(--transition-duration-3_4),
+              opacity var(--transition-duration-1_2) linear var(--transition-duration-1_2),
+              visibility 0s;
+}
+
+:host(.main) .section__content {
+  transform: translate(0px, 666px);
+  opacity: 0;
+  transition: opacity var(--transition-duration-1_4) linear 0s,
+              transform 0s linear var(--transition-duration-1_4),
+              visibility var(--transition-duration-1_4);
 }
 
 .section__main-cell {
@@ -116,4 +145,20 @@
   pointer-events: none;
 
   transition: transform var(--transition-duration-1_3) linear 0s;
+}
+
+.section__ss-hand {
+  position: absolute;
+  right: 50px;
+  top: calc(50% - 65px);
+
+  opacity: 1;
+  transition: opacity var(--transition-duration-1_4) linear var(--transition-duration-2);
+
+  --fill: var(--color-black-font);
+}
+
+:host(.main) .section__ss-hand {
+  opacity: 0;
+  transition: opacity var(--transition-duration-1_4) linear 0s;
 }

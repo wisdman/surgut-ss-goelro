@@ -35,10 +35,16 @@ path {
 }
 
 @keyframes ss-hand-move {
-  from {
-    transform: translate(0, 0);
+  0% {
+    transform: translate(0, 0) scale(1.05);
   }
-  to {
-    transform: translate(0, 60px);
+  20% {
+    transform: translate(0, 12px) scale(1);
+  }
+  80% {
+    transform: translate(0, 48px) scale(1);
+  }
+  100% {
+    transform: translate(0, 60px) scale(1.05);
   }
 }

@@ -75,6 +75,7 @@
   height: auto;
   padding-bottom: 70px;
   margin-left: 112px;
+  pointer-events: none;
 }
 
 .content__article.is-active {
