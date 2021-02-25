@@ -74,7 +74,7 @@ export class RouterComponent extends AbstractComponent {
     
     this.reset()
     this.root.appendChild(content.cloneNode(true))
-    console.log(window.location.pathname, this.backPath)
+    // console.log(window.location.pathname, this.backPath)
     if (path !== this.backPath) this.root.appendChild(this.#backBtn)
     document.title = title
 
