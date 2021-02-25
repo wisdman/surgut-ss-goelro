@@ -120,18 +120,18 @@
   --tan: calc(var(--tan-term1) + var(--tan-term2) + var(--tan-term3) + var(--tan-term4));
 
   background: conic-gradient(
-    from .5turn at 100% 51%,
+    from .5turn at 100% 50%,
     transparent 0deg calc(var(--angle) * 1deg),
     var(--color) calc(var(--angle) * 1deg) calc(180deg - var(--angle) * 1deg),
     transparent calc(180deg - var(--angle) * 1deg) 360deg
   ), conic-gradient(
-    from .5turn at calc(var(--tan) * var(--height) / 2) 51%,
+    from .5turn at calc(var(--tan) * var(--height) / 2) 50%,
     var(--color) 0deg calc(var(--angle) * 1deg),
     transparent calc(var(--angle) * 1deg) calc(180deg - var(--angle) * 1deg),
     var(--color) calc(180deg - var(--angle) * 1deg) 360deg
   );
 
-  background-size: 50% 100%;
+  background-size: 51% 100%;
   background-position: 100% 50%, 0% 50%;
   background-repeat: no-repeat;
 }
@@ -175,7 +175,7 @@
 
 .ribbon__section-item-images img:nth-last-of-type(1) {
   position: sticky;
-  left: 16px;
+  left: var(--padding);
 }
 
 .ribbon__section-item-text {
