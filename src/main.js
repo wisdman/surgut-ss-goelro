@@ -45,10 +45,6 @@ async function reload() {
   windows.forEach(w => w.loadURL(SS_URL))
 } 
 
-function urls() {
-  windows.forEach(w => w.loadURL("chrome://chrome-urls/"))
-}
-
 function gpu() {
   windows.forEach(w => w.loadURL("chrome://gpu/"))
 }
@@ -99,7 +95,6 @@ async function initViewPorts() {
 
 async function initGlobalShortcut() {
   globalShortcut.register("CommandOrControl+Q", exit)
-  globalShortcut.register("CommandOrControl+U", urls)
   globalShortcut.register("CommandOrControl+G", gpu)
   globalShortcut.register("F5", reload)
 }
