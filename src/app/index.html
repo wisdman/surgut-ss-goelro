@@ -156,27 +156,10 @@
     
     <!-- Лента времени -->
     <template data-route="/ss-6" data-title="SmartScreen VI">
-      <ss-main-page class="ss-6"></ss-main-page>
-    </template>
-    <template data-route="/ss-6/section-1" data-title="SmartScreen VI - Section 1">
-      <!-- Газпром энергостыт - Тюмень -->
-      <ss-section data-section="1"></ss-section>
-    </template>
-    <template data-route="/ss-6/section-2" data-title="SmartScreen VI - Section 2">
-      <!-- Россети -->
-      <ss-section data-section="2"></ss-section>
-    </template>
-    <template data-route="/ss-6/section-3" data-title="SmartScreen VI - Section 3">
-      <!-- ЮниПром -->
-      <ss-section data-section="3"></ss-section>
-    </template>
-    <template data-route="/ss-6/section-4" data-title="SmartScreen VI - Section 4">
-      <!-- ГРЭС-1 / ОГК-2 -->
-      <ss-section data-section="4"></ss-section>
-    </template>
-    <template data-route="/ss-6/section-5" data-title="SmartScreen VI - Section 5">
-      <!-- СГЭС -->
-      <ss-section data-section="5"></ss-section>
+      <ss-time-ribbon>
+        <link rel="stylesheet" type="text/css" href="/content/ss-6/ribbon.css">
+        <ss-content data-html="/content/ss-6/ribbon.html"></ss-content>
+      </ss-time-ribbon>
     </template>
     
     <!-- Коллектив -->
