@@ -32,7 +32,7 @@ export class TimeRibbonComponent extends AbstractComponent {
   static STYLES = STYLE
   static TEMPLATE = TEMPLATE
 
-  #wrapper = this.$(".wrapper", { host: false });
+  #wrapper = this.$(".wrapper", { host: false })
 
   connectedCallback() {
     super.connectedCallback()
@@ -46,47 +46,43 @@ export class TimeRibbonComponent extends AbstractComponent {
     const sections = data.reduce((acc, {body, brand, date, images, width}) => {
       const { day, month, year } = ParseDate(date)
       const order = (month || 0) * 100 + (day || 0)
+      const title = day ? `${day} ${M[month][1]}` : month ? M[month][0] : undefined
 
-      const template = document.createElement("template")
-
-      const li = document.createElement("li")
-      li.classList.add("ribbon__section-item")
-      li.classList.add(`ribbon__section-item--${brand}`)
-      width && li.style.setProperty("--width", `${width}px`)
-
-      const itemText = document.createElement("div")
-      itemText.classList.add("ribbon__section-item-text")
-
-      const titleTxt = day ? `${day} M[month][1]` : month ? M[month][0] : undefined
-      if (titleTxt) {
-        const title = document.createElement("h2")
-        title.classList.add("ribbon__section-item-title")
-        itemText.appendChild(title)
-      }
-
-      const p = document.createElement("p")
-      p.innerText = body
-      itemText.appendChild(p)
-
-      li.appendChild(itemText)
-
-      const itemImages = document.createElement("div")
-      itemImages.classList.add("ribbon__section-item-images")
-
-      for (const src of (images ?? [])) {
-        const img = new Image(`${base}${src}`)
-        itemImages.appendChild(img)
-      }
-
-      li.appendChild(itemImages)
-
-      template.appendChild(li)
-
-      acc[year] = [...(acc[year] ?? []), { order, template }]
+      acc[year] = (acc[year] || "") + `
+        <li class="ribbon__section-item ribbon__section-item--${brand || "default"}"
+            style="--width: ${width}px; --order: ${order || 9999}">
+          <div class="ribbon__section-item-text">
+            ${title ? `<h2 class="ribbon__section-item-title">${title}</h2>` : ""}
+            <p>${body}</p>
+          </div>
+          <div class="ribbon__section-item-images">
+            ${ (images ?? []).map(src => `<img src="${base}${src}">`).join("") }
+          </div>
+        </li>
+      `
       return acc
     }, {})
 
-    console.log(sections)
+    const html = Object.entries(sections).map(([year, html]) => {
+      return `
+        <section class="ribbon__section" style="order: ${year || 6666}">
+          <h1 class="ribbon__section-title"><span>${String(year).substr(2,2)}</span>${year}</h1>
+          <ul class="ribbon__section-list">${html}</ul>
+        </section>
+      `
+    })
+
+    const template = document.createElement("template")
+    template.innerHTML = `
+      <div class="wrapper">
+        ${html.join("")}
+        <section class="ribbon__section" style="order: 9999">
+        <h1 class="ribbon__section-title"><span>21</span>2021</h1>
+        </section>
+      <div>`
+
+    this.#wrapper.innerHTML = ""
+    this.#wrapper.appendChild(template.content.cloneNode(true))
   }
 
   onScroll = () => {
