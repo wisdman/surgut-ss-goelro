@@ -48,9 +48,11 @@ export class TimeRibbonComponent extends AbstractComponent {
       const order = (month || 0) * 100 + (day || 0)
       const title = day ? `${day} ${M[month][1]}` : month ? M[month][0] : undefined
 
+      width = width || 800
+
       acc[year] = (acc[year] || "") + `
         <li class="ribbon__section-item ribbon__section-item--${brand || "default"}"
-            style="--width: ${width}px; --order: ${order || 9999}">
+            style="--max-text-width: ${width}px; --order: ${order || 9999}">
           <div class="ribbon__section-item-text">
             ${title ? `<h2 class="ribbon__section-item-title">${title}</h2>` : ""}
             <p>${body}</p>

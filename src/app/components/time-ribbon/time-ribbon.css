@@ -160,7 +160,7 @@
   grid-auto-columns: min-content;
   grid-template-rows: 100%;
 
-  column-gap: 30px;
+  column-gap: 60px;
 }
 
 .ribbon__section-item-images img {
@@ -183,7 +183,7 @@
   display: flex;
   flex-direction: column;
 
-  max-width: 800px;
+  max-width: var(--max-text-width);
 }
 
 .ribbon__section-item:nth-child(even) .ribbon__section-item-text { padding-bottom: var(--padding); }
