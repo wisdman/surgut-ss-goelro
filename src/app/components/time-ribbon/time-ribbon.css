@@ -92,6 +92,7 @@
   display: flex;
   align-items: stretch;
   justify-content: flex-start;
+  gap: 100px;
 
   filter: drop-shadow(1px 3px 5px var(--color-shadow));
 
