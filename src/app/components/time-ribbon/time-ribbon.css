@@ -173,6 +173,11 @@
   object-fit: cover;
 }
 
+.ribbon__section-item-images img:nth-last-of-type(1) {
+  position: sticky;
+  left: 16px;
+}
+
 .ribbon__section-item-text {
   --line-size: 10px;
   --before-width: calc(var(--line-size) * 5);
