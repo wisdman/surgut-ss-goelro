@@ -1,0 +1,13 @@
+[{
+  "brand": "------",
+  "date": "10.12.2020 / 12.2020",
+  "title": "------",
+  "body": "html",
+  "images": ["src", "src", "src"]
+},{
+  "brand": "------",
+  "date": "10.12.2020 / 12.2020",
+  "title": "------",
+  "body": "html",
+  "images": ["assets/image.jpg", "src", "src"]
+}]
