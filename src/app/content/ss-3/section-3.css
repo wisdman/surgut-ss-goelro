@@ -52,3 +52,11 @@
   height: auto;
   border: 1px solid #fff;
 }
+
+.content__article img.no-border {
+  top: 0;
+  border: 0;
+  align-self: center;
+  width: 70%;
+  margin: 0 auto;
+}
