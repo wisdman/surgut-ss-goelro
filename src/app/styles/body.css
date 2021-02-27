@@ -14,13 +14,14 @@ body {
   position: relative;
 
   margin: 0;
-  padding: 16px;
+  --padding: 16px;
+  padding: var(--padding);
   
   background-image: url("body-bg-frame.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-color: rgb(0 0 0 / 1);
-  
+
   color: rgb(255 255 255 / 0.87);
 
   display: grid;
