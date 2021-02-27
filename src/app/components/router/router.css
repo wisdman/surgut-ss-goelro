@@ -1,6 +1,7 @@
 :host {
   display: contents;
   position: relative;
+  overflow: hidden;
 }
 
 .back-btn {
