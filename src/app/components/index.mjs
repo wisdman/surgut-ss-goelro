@@ -1,4 +1,5 @@
 export { AbstractComponent } from "./abstract/index.mjs"
+export * from "./a-route/index.mjs"
 export * from "./brand-selector/index.mjs"
 export * from "./card-ribbon/index.mjs"
 export * from "./content/index.mjs"
