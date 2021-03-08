@@ -1,80 +1,208 @@
 :host {
   background-image: url(assets/section-2/bg.webp);
   background-position: 50% -850px;
-  background-size: 1920px auto;
+  background-size: calc(var(--screen-width) * 1px) auto;
 
   display: grid;
   grid-template-rows: min-content 1fr;
+  grid-template-columns: 1fr;
 }
 
-.header {
-  display: block;
+.section__header {
   box-sizing: border-box;
   position: relative;
 
-  min-height: 100px;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
   background-color: rgb(255 255 255 / .87);
 
-  background-image: url(assets/section-2/logo.svg);
-  background-size: auto 0;
-  background-position: 50% calc(50% - 15px);
-  background-repeat: no-repeat;
-
-  transition: min-height 1s, background-size 1s;
+  /*transition: min-height 1s, background-size 1s;*/
 }
 
-:host(.main) .header {
-  min-height: 300px;
-  background-size: auto calc(80% - 30px);
+.section__header-logo {
+  margin: 30px auto;
+  height: 0px;
+  width: auto;
+
+  transition: height var(--transition-duration-1_2) ease;
 }
 
-.header::after {
-  display: block;
+:host(.main) .section__header-logo {
+  height: 150px;
+}
+
+.section__header::after {
   content: "";
-  position: absolute;
-
-  left: 0;
-  width: 100%;
-  bottom: 0;
   height: 30px;
-
   background: repeating-linear-gradient(45deg, #9dceee, #9dceee 4px, #005b9c 4px, #005b9c 6px);
 }
 
-.wrapper {
-  border: 30px solid rgb(255 255 255);
+.section__content-cell {
   background: linear-gradient(0deg, rgba(0,91,156,1) 70%, rgba(0,91,156,0.5) 100%);
+  border: 30px solid rgb(255 255 255);
 
-  display: grid;
+  transition: border-width var(--transition-duration-1_2) linear 0s,
+              background var(--transition-duration-1_2) linear 0s;
+
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content;
 
-  padding: 30px;
-
-  transition: padding 1s, border-width 1s, 1s background 0s;
+  height: 100%;
   overflow: hidden;
 }
 
-:host(.main) .wrapper {
+:host(.main) .section__content-cell {
   background: linear-gradient(0deg, rgba(0,91,156,1) 99%, rgba(0,91,156,0.5) 100%);
-
-  padding: 0px;
   border-width: 0px;
 }
 
-.logo {
-  height: 70px;
+.section__content-main {
+  grid-area: 1 / 1 / span 1 / -1;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+:host(.main) .section__content-main {
+  pointer-events: auto;
+}
+
+.section__content-main-title {
+  grid-area: span 1 / 1 / -1 / -1;
+
+  transform: translate(0, 100%);
+  transition: transform var(--transition-duration-1_4) ease-in 0s;
+}
+
+:host(.main) .section__content-main-title {
+  transform: translate(0, 0);
+  transition: transform var(--transition-duration-1_4) ease-out var(--transition-duration-3_4);
+}
+
+.section__content-box-wrapper {
+  grid-area: 1 / 1 / -1 / -1;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0 30px;
+  position: relative;
+}
+
+.section__content-box {
+  overflow: hidden;
+  overflow-y: scroll;
+  pointer-events: auto;
+  height: 100%;
+}
+
+.section__content {
+  --transparent-color: transparent;
+  --text-color: var(--color-white-font);
+  /*--transparent-color: red;*/
+
+  -webkit-text-fill-color: transparent;
+  background-color: transparent;
+  background-image:
+    linear-gradient(280deg, var(--transparent-color), var(--text-color) 50%, var(--text-color)),
+    linear-gradient(180deg, var(--transparent-color), var(--text-color) 10%, var(--text-color)),
+    linear-gradient(0deg, var(--transparent-color), var(--text-color) 10%, var(--text-color)),
+    linear-gradient(0deg, var(--transparent-color), var(--text-color) 10%, var(--text-color));
+  background-size: 50px 150px, 1920px 450px, 1550px 450px, 296px 450px;
+  background-position: 1520px 840px, 0 200px, 0 570px, 1548px 455px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+
+  transform: translate(0px, 0px);
+  opacity: 1;
+  visibility: visible;
+  
+  transition: transform var(--transition-duration-1_4) linear var(--transition-duration-3_4),
+              opacity var(--transition-duration-1_2) linear var(--transition-duration-1_2),
+              visibility 0s;
+}
+
+:host(.main) .section__content {
+  transform: translate(0px, 1080px);
+  opacity: 0;
+  transition: opacity var(--transition-duration-1_4) linear 0s,
+              transform 0s linear var(--transition-duration-1_4),
+              visibility var(--transition-duration-1_4);
+}
+
+.section__back {
+  left: 70px;
+  bottom: 50px;
+  width: 100px;
+  height: auto;
+  color: var(--color-white-font);
+
+  transform: translate(0px, 0px);
+  pointer-events: auto;
+
+  transition: transform var(--transition-duration-1_4) linear var(--transition-duration-1);
+}
+
+:host(.main) .section__back {
+  transform: translate(-1000px, 0px);
+  pointer-events: none;
+
+  transition: transform var(--transition-duration-1_3) linear 0s;
+}
+
+.section__content-item-title {
+  display: block;
+  position: absolute;
+  top: 460px;
+  left: 60px;
+
+  transform: translate(0%, 0);
+  transition: transform var(--transition-duration-1_4) ease-in-out var(--transition-duration-1_2);
+}
+
+:host(.main) .section__content-item-title {
+  transform: translate(-200%, 0);
+  transition: transform var(--transition-duration-1_4) ease-in-out 0s;
+}
+
+.section__ss-hand {
+  position: absolute;
+  right: 50px;
+  top: calc(50% - 65px);
+
+  opacity: 1;
+  transition: opacity var(--transition-duration-1_4) linear var(--transition-duration-2);
+
+  --fill: var(--color-white-font);
+}
+
+:host(.main) .section__ss-hand {
+  opacity: 0;
+  transition: opacity var(--transition-duration-1_4) linear 0s;
+}
+
+.section__content-logo {
+  position: absolute;
+
+  right: 40px;
+  bottom: 40px;
+  height: 80px;
   width: auto;
 
   transform: translate(0px, 0px);
-  transition: transform 1s;
+  pointer-events: auto;
+
+  transition: transform var(--transition-duration-1_4) linear var(--transition-duration-1_4);
 }
 
-:host(.main) .logo {
-  transform: translate(-300px, 500px);
-}
+:host(.main) .section__content-logo {
+  transform: translate(200%, 0px);
+  pointer-events: none;
 
-/*:host(.main) .logo {
-  height: 70px;
-  opacity: 1;
-}*/
+  transition: transform var(--transition-duration-1_3) linear 0s;
+}

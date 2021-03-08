@@ -36,13 +36,34 @@
 <template id="section-2">
   <!-- Россети -->
   <link rel="stylesheet" type="text/css" href="${base}section-2.css">
-  <div class="header"></div>
-  <div class="wrapper">
-    <div classs="content">
-      <slot></slot>
-    </div>
-    <img class="logo" src="${base}assets/section-2/logo-w.svg" width="670" height="210">
+  <div class="section__header">
+    <img class="section__header-logo" src="${base}assets/section-2/logo.svg" width="670" height="210">
   </div>
+
+  <div class="section__content-cell">
+    <div class="section__content-box-wrapper">
+      <div class="section__content-box" scrollable>
+        <div class="section__content">
+          <slot name="content"></slot>
+        </div>
+      </div>
+      <div class="section__content-item-title">
+        <slot name="item-title"></slot>
+      </div>
+      <ss-hand class="section__ss-hand"></ss-hand>
+      <img class="section__content-logo" src="${base}assets/section-2/logo-w.svg" width="670" height="210">
+    </div>
+
+    <div class="section__content-main">
+      <slot name="main"></slot>
+    </div>
+
+    <div class="section__content-main-title">
+      <slot name="title"></slot>
+    </div>
+  </div>
+
+  <a href="#" class="section__back"><span>&larr;</span></a>
 </template>
 
 <template id="section-3">

@@ -31,5 +31,7 @@ module.exports = {
 
     backgroundThrottling: false,
     spellcheck: false,
+
+    experimentalFeatures: true,
   },
 }

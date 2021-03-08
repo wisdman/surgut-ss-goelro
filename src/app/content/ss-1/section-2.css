@@ -1,0 +1,234 @@
+
+.content__title {
+  margin: 0;
+  padding: 10px 30px 20px 30px;
+
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.6;
+
+  text-align: center;
+
+  color: var(--color-white-font);
+}
+
+.content__main {
+  width: 100%;
+  height: 100%;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /*padding-top: 60px;*/
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.content__main::after {
+  content: "";
+  order: 2;
+  margin-left: 100%;
+}
+
+.content__main-item {
+  position: relative;
+
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  flex: 0 0 auto;
+  white-space: nowrap;
+  filter: drop-shadow(1px 3px 5px var(--color-shadow));
+
+  order: 1;
+}
+
+.content__main-item:nth-of-type(4) ~ .content__main-item {
+  order: 3;
+}
+
+
+.content__main-item__figure {
+  --item-width: 180px;
+  --aspect-ratio: calc(3 / 2);
+
+  display: block;
+  box-sizing: border-box;
+  
+  width: var(--item-width);
+  height: calc(var(--item-width) * var(--aspect-ratio));
+  
+  margin: 0;
+  padding: 10px;
+  border: 10px solid #005b9c;
+
+  background-color: #fff;
+  box-shadow: 2px 3px 10px var(--color-shadow);
+
+  transition: width var(--transition-duration-1_4) linear var(--transition-duration-1_4),
+              height var(--transition-duration-1_4) linear var(--transition-duration-1_4);
+}
+
+.content__article.is-active ~ .content__main .content__main-item__figure {
+  --item-width: 260px;
+}
+
+.content__main-item__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content__main-item__link {
+  margin-top: 6px;
+
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+
+  text-align: center;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0);
+  color: var(--color-white-font);
+}
+
+.content__main-item__link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.content__article {
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 30px 130px;
+  padding-left: 330px;
+  padding-bottom: 130px;
+  pointer-events: none;
+}
+
+.content__article.is-active {
+  display: block;
+}
+
+.content__article p {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.666;
+
+  margin: 0.666em 0;
+
+  color: var(--color-white-font);
+}
+
+.content__main-item {
+  opacity: 1;
+  transition: opacity var(--transition-duration-1_4) linear var(--transition-duration-1_2),
+              transform var(--transition-duration-1_2) ease-in-out 0s;
+}
+
+.content__article.is-active ~ .content__main .content__main-item {
+  opacity: 0;
+  transition: opacity var(--transition-duration-1_4) linear 0s,
+              transform var(--transition-duration-1_2) ease-in-out 0s;
+} 
+
+.content__main-item__link {
+  opacity: 1;
+  transition: opacity var(--transition-duration-1_4) linear var(--transition-duration-1_2),
+              transform var(--transition-duration-1_2) ease-in-out 0s;
+}
+
+.content__article.is-active ~ .content__main .content__main-item__link {
+  opacity: 0;
+  transition: opacity var(--transition-duration-1_4) linear 0s,
+              transform var(--transition-duration-1_2) ease-in-out var(--transition-duration-1_2);
+}
+
+.content__article:nth-of-type(1).is-active ~ .content__main .content__main-item:nth-of-type(1),
+.content__article:nth-of-type(2).is-active ~ .content__main .content__main-item:nth-of-type(2),
+.content__article:nth-of-type(3).is-active ~ .content__main .content__main-item:nth-of-type(3),
+.content__article:nth-of-type(4).is-active ~ .content__main .content__main-item:nth-of-type(4),
+.content__article:nth-of-type(5).is-active ~ .content__main .content__main-item:nth-of-type(5),
+.content__article:nth-of-type(6).is-active ~ .content__main .content__main-item:nth-of-type(6),
+.content__article:nth-of-type(7).is-active ~ .content__main .content__main-item:nth-of-type(7),
+.content__article:nth-of-type(8).is-active ~ .content__main .content__main-item:nth-of-type(8),
+.content__article:nth-of-type(9).is-active ~ .content__main .content__main-item:nth-of-type(9) {
+  opacity: 1;
+}
+
+.content__article:nth-of-type(1).is-active ~ .content__main .content__main-item:nth-of-type(1) {
+  transform: translate(-60px, 40px);
+}
+
+.content__article:nth-of-type(2).is-active ~ .content__main .content__main-item:nth-of-type(2) {
+  transform: translate(-516px, 40px);
+}
+
+.content__article:nth-of-type(3).is-active ~ .content__main .content__main-item:nth-of-type(3) {
+  transform: translate(-974px, 40px);
+}
+
+.content__article:nth-of-type(4).is-active ~ .content__main .content__main-item:nth-of-type(4) {
+  transform: translate(-1430px, 40px);
+}
+
+.content__article:nth-of-type(5).is-active ~ .content__main .content__main-item:nth-of-type(5) {
+  transform: translate(-15px, -410px);
+}
+
+.content__article:nth-of-type(6).is-active ~ .content__main .content__main-item:nth-of-type(6) {
+  transform: translate(-378px, -410px);
+}
+
+.content__article:nth-of-type(7).is-active ~ .content__main .content__main-item:nth-of-type(7) {
+  transform: translate(-743px, -410px);
+}
+
+.content__article:nth-of-type(8).is-active ~ .content__main .content__main-item:nth-of-type(8) {
+  transform: translate(-1112px, -410px);
+}
+
+.content__article:nth-of-type(9).is-active ~ .content__main .content__main-item:nth-of-type(9) {
+  transform: translate(-1477px, -410px);
+}
+
+.content__article-title {
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 300px;
+
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.53;
+
+  text-transform: uppercase;
+  color: var(--color-white-font);
+
+  filter: drop-shadow(1px 3px 5px var(--color-shadow));
+}
+
+.content__article.is-active + .content__article-title {
+  display: block;
+}
