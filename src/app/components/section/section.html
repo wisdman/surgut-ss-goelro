@@ -156,10 +156,37 @@
 <template id="section-5">
   <!-- СГЭС -->
   <link rel="stylesheet" type="text/css" href="${base}section-5.css">
-  <img class="section__logo" src="${base}assets/section-5/logo.svg" width="383" height="223">
-  <div class="section__content-wrapper">
-    <div class="section__content">
-      <!-- <slot></slot> -->
+  
+  <div class="section__header">
+    <img class="section__header-logo" src="${base}assets/section-5/logo.svg" width="383" height="223">
+  </div>
+
+  <div class="section__backdrop"></div>
+
+  <div class="section__content-title">
+    <slot name="item-title"></slot>
+  </div>
+
+  <div class="section__content-cell">
+    <div class="section__content-box-wrapper">
+      <div class="section__content-box" scrollable>
+        <div class="section__content">
+          <slot name="content"></slot>
+        </div>
+      </div>
+      <ss-hand class="section__ss-hand"></ss-hand>
     </div>
   </div>
+
+  <div class="section__main">
+    <slot name="main"></slot>
+  </div>
+
+  <div class="section__main-title">
+    <slot name="title"></slot>
+  </div>
+
+  <a class="section__content-logo-link" href="#">
+    <img class="section__content-logo" src="${base}assets/section-5/logo.svg" width="383" height="223">
+  </a>
 </template>
