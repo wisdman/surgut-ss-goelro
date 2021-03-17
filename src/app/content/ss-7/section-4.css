@@ -111,10 +111,11 @@ h1 {
 .article__text {
   font-size: 30px;
   font-family: "PT Sans";
-  background-color: rgba(255,255,255,0.8);
+  /*background-color: rgba(255,255,255,0.8);*/
   padding: 50px;
   width: auto;
   border-radius: 0 0 100px 0;
+  padding-top: 0;
 }
 
 .article__text h1 {
@@ -126,6 +127,16 @@ h1 {
   margin: 0;
   margin-bottom: 50px;
   letter-spacing: 0;
+  line-height: 1.49;
+}
+
+.article__text p {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.666;
+
+  /*margin: 0.666em 0;*/
 }
 
 

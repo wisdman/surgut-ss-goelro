@@ -104,6 +104,11 @@
   color: var(--color-black-font);
 }
 
-figure {
+.content__article img {
+  width: 100%;
+}
+
+.content__article figure {
   margin-left: 0;
+  margin-right: 0;
 }

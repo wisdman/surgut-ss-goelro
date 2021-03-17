@@ -1,224 +1,61 @@
-.article {
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-}
-.article:not(.article--inner) {
-  border-bottom: 147px solid #005B9C;
-}
 
-.article__header {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  background: rgba(255,255,255,0.5);
-  height: 90px;
-}
-
-.article__header img {
-  height: 70px;
-  margin-top: 13px;
-}
-
-h1 {
-  color: #fff;
-  font-size: 50px;
-  font-family: "PT Sans";
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+.content__title {
   margin: 0;
-  background-color: #005B9C;
+  padding: 10px 30px 20px 30px;
+
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.6;
+
+  text-align: center;
+
+  color: var(--color-white-font);
 }
 
 .article__list {
+  width: 100%;
+  height: 100%;
+
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  flex-direction: row;
-}
-
-.article__list li {
-  margin: 0;
-  font-size: 30px;
-  font-family: "PT Sans";
-  font-weight: bold;
-  color: #065A93;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0, rgba(255,255,255,1) 20%, rgba(0,91,156,0.6) 100%);
-  width: 20%;
-  position: relative;
-}
-
-.article__list li:not(:first-child) {
-  border-left: 4px solid #005B9C;
-}
-
-.article__list li:not(:first-child):after {
-  content: "";
-  display: block;
-  width: 12px;
-  height: 12px;
-  background-image: url(../../assets/rosseti/square.svg);
-  position: absolute;
-  bottom: -12px;
-  left: -8px;
-}
-
-
-.article__list a {
-  padding: 30px;
-  display: block;
-  text-decoration: none;
-  color: #000;
-  font-size: 30px;
-}
-
-
-.article__list a img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-}
-
-.article__list a span {
-  display: block;
-  position: absolute;
-  z-index: 10;
-  background-size: cover;
-  background-position: 50% 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0;
-  background-color: rgba(225,225,225,0.8);
-  width: 100%;
-  padding: 10px 50px;
-  text-align: center;
+  /*padding-top: 60px;*/
   box-sizing: border-box;
-  font-size: 30px;
-  font-family: "PT Sans";
-  min-height: 137px;
+
   display: flex;
-  align-items: center;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: wrap;
 }
 
-.article--inner .article__content {
-  display: flex;
-  flex-direction: row-reverse;
-  column-gap: 50px;
-  padding: 50px;
-  height: 100%;
+.content__article {
+  display: none;
   box-sizing: border-box;
-  margin: 30px;
-  background: linear-gradient(180deg, rgba(255,255,255,0) 0, rgba(0,91,156,1) 60%, rgba(0,91,156,1) 100%), url(../../assets/rosseti/bg.png);
-  background-size: cover;
-  background-position: 50% -130%;
-}
-
-.article__image {
-  width: 670px;
-  min-width: 670px;
-  position: relative;
-}
-
-.article__image img {
-  max-width: 100%;
-  margin-bottom: 10px;
-}
-
-.article__text {
-  font-size: 30px;
-  font-family: "PT Sans";
-  
-  width: auto;
-  color: #020F42;
-  padding: 20px;
-  background-color: rgba(167,215,240, 0.8);
-
-}
-.article--inner .article__container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0, rgba(255,255,255,1) 20%, rgba(0,91,156,1) 100%);
-}
-.article--inner h1 {
-  display: flex;
-  position: relative;
-  color: #005B9C;
-  font-size: 32px;
-  font-family: "PT Sans";
-  text-align: left;
-  text-transform: uppercase;
-  margin: 0;
-  margin-bottom: 0;
-  letter-spacing: 0;
- 
-  font-weight: bold;
-  text-align: center;
-  height: 160px;
-  align-items: center;
-  justify-content: center;
-
-  background: linear-gradient(0deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.8) 100%), url(../../assets/rosseti/bg.png);
-  background-size: cover;
-  background-position: 50% -175%;
-}
-
-.article--inner h1::after {
-  position: absolute;
   width: 100%;
-  bottom: 0;
+  height: auto;
+  padding: 30px 130px;
+  padding-left: 330px;
+  padding-bottom: 130px;
+  pointer-events: none;
+}
+
+.content__article.is-active {
   display: block;
-  content: "";
-  height: 20px;
-  background: repeating-linear-gradient(
-      -45deg
-      , rgba(167,215,240,1) 0, rgba(167,215,240,1) 10px, rgba(0,91,156,1) 10px, rgba(0,91,156,1) 15px, rgba(167,215,240,1) 15px);
 }
 
+.content__article p {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.666;
 
-.article--inner {
-  /* background-image: url(../../assets/rosseti/bg.png);
-  background-size: cover; */
-  padding-top: 0;
+  margin: 0.666em 0;
+
+  color: var(--color-white-font);
 }
 
-.article--inner .article__header img {
-  height: 47px;
-  margin-top: 26px;
-}
-
-.img3_1 {
-  position: absolute;
-  top: 150px;
-  left: 20px;
-  width: 300px;
-}
-
-.img4_1 {
-  width: 400px;
-}
-
-.img4_2 {
-  position: absolute;
-  top: 50px;
-  left: 20px;
-  width: 400px;
-}
-
-.img4_3 {
-  position: absolute;
-  top: 100px;
-  left: 40px;
-  width: 400px;
-}
-
-.img4_4 {
-  position: absolute;
-  top: 150px;
-  left: 60px;
-  width: 400px;
+.content__article img {
+  display: block;
+  width: 100%;
 }
