@@ -1,0 +1,74 @@
+[
+    {
+      "year": 2019,
+      "quantity": 652,
+      "power": "28 236",
+      "length": "50 921"
+    },
+    {
+      "year": 2018,
+      "quantity": 647,
+      "power": "27 859",
+      "length": "50 620"
+    },
+    {
+      "year": 2017,
+      "quantity": 648,
+      "power": "27 796",
+      "length": "50 423"
+    },
+    {
+      "year": 2016,
+      "quantity": 647,
+      "power": "27 699",
+      "length": "50 094"
+    },
+    {
+      "year": 2015,
+      "quantity": 646,
+      "power": "27 465",
+      "length": "49 730"
+    },
+    {
+      "year": 2014,
+      "quantity": 643,
+      "power": "26 995",
+      "length": "48 563"
+    },
+    {
+      "year": 2013,
+      "quantity": 643,
+      "power": "26 997",
+      "length": "48 485"
+    },
+    {
+      "year": 2012,
+      "quantity": 642,
+      "power": "26 715",
+      "length": "48 485"
+    },
+    {
+      "year": 2011,
+      "quantity": 637,
+      "power": "26 405",
+      "length": "46 881"
+    },
+    {
+      "year": 2010,
+      "quantity": 631,
+      "power": "25 611",
+      "length": "44 971"
+    },
+    {
+      "year": 2009,
+      "quantity": 627,
+      "power": "25 344",
+      "length": "44 905"
+    },
+    {
+      "year": 2008,
+      "quantity": 619,
+      "power": "24 180",
+      "length": "44 704"
+    }
+  ]

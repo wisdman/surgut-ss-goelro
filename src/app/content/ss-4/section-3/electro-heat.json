@@ -1,0 +1,47 @@
+[
+  {
+    "year": 2011,
+    "electro": "38 829",
+    "heat": 863
+  },
+  {
+    "year": 2012,
+    "electro": "39 967",
+    "heat": 891
+  },
+  {
+    "year": 2013,
+    "electro": "39 850",
+    "heat": "908,7"
+  },
+  {
+    "year": 2014,
+    "electro": "37 886",
+    "heat": 961
+  },
+  {
+    "year": 2015,
+    "electro": "32 836",
+    "heat": 896
+  },
+  {
+    "year": 2016,
+    "electro": "35 746",
+    "heat": 953
+  },
+  {
+    "year": 2017,
+    "electro": "31 963",
+    "heat": 945
+  },
+  {
+    "year": 2018,
+    "electro": 30437,
+    "heat": 966
+  },
+  {
+    "year": 2019,
+    "electro": 30190,
+    "heat": 913
+  }
+]
