@@ -1,10 +1,11 @@
 <!-- Газпром энергостыт - Тюмень - Факты -->
 
-<h1 slot="title" class="content__title">Интересные факты о компании
-ООО «Сургутские городские электрические сети»</h1>
+<h1 slot="title" class="content__title">
+  <span>Интересные факты о компании<br>ООО «Сургутские городские электрические сети»</span>
+</h1>
 
 <article id="article-1" slot="content" class="content__article">
-  <p>          В рамках празднования 75-летия Победы в Великой Отечественной войне «Россети Тюмень» при участии Губернатора Ханты-Мансийского автономного округа – Югры Натальи Комаровой открыли в Сургуте «Аллею памяти и славы». Создание Аллеи и благоустройство прилегающей к ней территории является вкладом компании в реализацию федерального проекта «Формирование комфортной городской среды».</p>
+  <p>В рамках празднования 75-летия Победы в Великой Отечественной войне «Россети Тюмень» при участии Губернатора Ханты-Мансийского автономного округа – Югры Натальи Комаровой открыли в Сургуте «Аллею памяти и славы». Создание Аллеи и благоустройство прилегающей к ней территории является вкладом компании в реализацию федерального проекта «Формирование комфортной городской среды».</p>
   <figure>
     <img src="${base}assets/section-2_1.png">
     <figcaption>
@@ -56,35 +57,15 @@
   </figure>
 </article>
 
-<ul slot="main" class="content__main">
-  <li class="content__main-item">
-    <figure class="content__main-item__figure">
-      <img class="content__main-item__img" src="${base}assets/section-1_1.png">
-    </figure>
-    <a class="content__main-item__link" href="#article-1">article-1</a>
-  </li>
-  <li class="content__main-item">
-    <figure class="content__main-item__figure">
-      <img class="content__main-item__img" src="${base}assets/section-1_2.png">
-    </figure>
-    <a class="content__main-item__link" href="#article-2">article-2</a>
-  </li>
-  <li class="content__main-item">
-    <figure class="content__main-item__figure">
-      <img class="content__main-item__img" src="${base}assets/section-1_3.png">
-    </figure>
-    <a class="content__main-item__link" href="#article-3">article-3</a>
-  </li>
-  <li class="content__main-item">
-    <figure class="content__main-item__figure">
-      <img class="content__main-item__img" src="${base}assets/section-1_4_45.png">
-    </figure>
-    <a class="content__main-item__link" href="#article-4">article-4</a>
-  </li>
-  <li class="content__main-item">
-    <figure class="content__main-item__figure">
-      <img class="content__main-item__img" src="${base}assets/section-1_5.png">
-    </figure>
-    <a class="content__main-item__link" href="#article-5">article-5</a>
-  </li>
-</ul>
+<div slot="main" class="content__main">
+  <a class="content__main-item" href="#article-1" style="background-image: url(${base}assets/section-2_1.png)">
+  </a>
+  <a class="content__main-item" href="#article-2" style="background-image: url(${base}assets/section-2_2.png)">
+  </a>
+  <a class="content__main-item" href="#article-3" style="background-image: url(${base}assets/section-2_3.png)">
+  </a>
+  <a class="content__main-item" href="#article-4" style="background-image: url(${base}assets/section-2_4.png)">
+  </a>
+  <a class="content__main-item" href="#article-5" style="background-image: url(${base}assets/section-2_4.png)">
+  </a>
+</div>
