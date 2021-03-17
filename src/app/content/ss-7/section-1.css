@@ -1,0 +1,182 @@
+
+.content__main {
+  width: 100%;
+  height: 100%;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content__main-item {
+  position: relative;
+
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content__main-item__figure {
+  --item-width: 230px;
+
+  display: block;
+  box-sizing: border-box;
+  
+  width: var(--item-width);
+  height: calc(var(--item-width) * 3 / 2);
+  
+  margin: 0;
+  padding: 10px;
+  border: 10px solid rgb(52 74 145 / 1);
+
+  background-color: #fff;
+  box-shadow: 2px 3px 10px var(--color-shadow);
+}
+
+.content__main-item__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content__main-item__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+
+  text-align: center;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0);
+}
+
+.content__main-item__link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.content__article {
+  display: none;
+  width: calc(100% - 112px);
+  height: auto;
+  padding-bottom: 70px;
+  margin-left: 112px;
+  pointer-events: none;
+}
+
+.content__article.is-active {
+  display: block;
+}
+
+.content__main-item {
+  opacity: 1;
+  transition: opacity var(--transition-duration-1_4) linear var(--transition-duration-3_4),
+              transform var(--transition-duration-1_2) ease-in-out 0s;
+}
+
+.content__article.is-active ~ .content__main .content__main-item {
+  opacity: 0;
+  transition: opacity var(--transition-duration-1_4) linear 0s,
+              transform var(--transition-duration-1_2) ease-in-out var(--transition-duration-1_2);
+} 
+
+.content__main-item__link {
+  opacity: 1;
+  transition: opacity var(--transition-duration-1_4) linear var(--transition-duration-3_4),
+              transform var(--transition-duration-1_2) ease-in-out 0s;
+}
+
+.content__article.is-active ~ .content__main .content__main-item__link {
+  opacity: 0;
+  transition: opacity var(--transition-duration-1_4) linear 0s,
+              transform var(--transition-duration-1_2) ease-in-out var(--transition-duration-1_2);
+}
+
+.content__article:nth-of-type(1).is-active ~ .content__main .content__main-item:nth-of-type(1),
+.content__article:nth-of-type(2).is-active ~ .content__main .content__main-item:nth-of-type(2),
+.content__article:nth-of-type(3).is-active ~ .content__main .content__main-item:nth-of-type(3),
+.content__article:nth-of-type(4).is-active ~ .content__main .content__main-item:nth-of-type(4),
+.content__article:nth-of-type(5).is-active ~ .content__main .content__main-item:nth-of-type(5),
+.content__article:nth-of-type(6).is-active ~ .content__main .content__main-item:nth-of-type(6) {
+  opacity: 1;
+}
+
+.content__article:nth-of-type(1).is-active ~ .content__main .content__main-item:nth-of-type(1) {
+  transform: translate(0px, -150px);
+}
+
+.content__article:nth-of-type(2).is-active ~ .content__main .content__main-item:nth-of-type(2) {
+  transform: translate(-315px, -150px);
+}
+
+.content__article:nth-of-type(3).is-active ~ .content__main .content__main-item:nth-of-type(3) {
+  transform: translate(-630px, -150px);
+}
+
+.content__article:nth-of-type(4).is-active ~ .content__main .content__main-item:nth-of-type(4) {
+  transform: translate(-945px, -150px);
+}
+
+.content__article:nth-of-type(5).is-active ~ .content__main .content__main-item:nth-of-type(5) {
+  transform: translate(-1260px, -150px);
+}
+
+.content__article:nth-of-type(6).is-active ~ .content__main .content__main-item:nth-of-type(6) {
+  transform: translate(-1575px, -150px);
+}
+
+.content__title {
+  margin: 0;
+  padding-left: 50px;
+  padding-top: 10px;
+
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  color: var(--color-white-font);
+}
+
+.content__article p {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.666;
+
+  margin: 0.666em 0;
+
+  color: var(--color-white-font);
+}
+
+.content__article-title {
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  text-transform: uppercase;
+
+  display: none;
+}
+
+.content__article.is-active + .content__article-title {
+  display: block;
+}

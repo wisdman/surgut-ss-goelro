@@ -1,0 +1,165 @@
+h1 {
+  color: #fff;
+  font-size: 50px;
+  font-family: "PT Sans";
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+.article__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.article__list li {
+  margin: 10px 0;
+
+
+  font-size: 30px;
+  font-family: "PT Sans";
+  font-weight: bold;
+  color: #065A93;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+}
+
+.article__list li:nth-child(1) a {
+  min-height: 105px;
+}
+
+.article__list li:nth-child(6) a {
+  width: 1114px;
+}
+
+.article__list li:nth-child(5) a {
+  min-height: 27px;
+}
+
+.article__list a {
+  display: block;
+  /* height: 338px;
+  width: 338px; */
+  position: relative;
+  
+  color: #065A93;
+  text-decoration: none;
+  text-align: center;
+  background-color: #fff;
+  width: 1032px;
+  margin: 0 auto;
+  padding: 14px;
+}
+
+.article__list li:nth-child(1) a::before,
+.article__list li:nth-child(1) a::after,
+.article__list li:nth-child(5) a::before,
+.article__list li:nth-child(5) a::after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+}
+.article__list li:nth-child(1) a::after {
+  border-width: 133px 133px 0 0;
+  border-color: #ffffff transparent transparent transparent;
+  right: -133px;
+}
+.article__list li:nth-child(1) a::before {
+  border-width: 0 133px 133px 0;
+  border-color: transparent #ffffff transparent transparent;
+  left: -133px;
+}
+
+.article__list li:nth-child(5) a::after {
+  border-width: 67px 0 0 41px;
+  border-color: transparent transparent transparent #ffffff;
+  right: -41px;
+}
+
+.article__list li:nth-child(5) a::before {
+  border-width: 0 0 67px 41px;
+  border-color: transparent transparent #ffffff transparent;
+  left: -41px;
+}
+
+.article__list a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.article__list a span {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  background-size: cover;
+  background-position: 50% 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background-color: rgba(225,225,225,0.8);
+  width: 100%;
+  padding: 10px 50px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 30px;
+  font-family: "PT Sans";
+  min-height: 137px;
+  display: flex;
+  align-items: center;
+}
+
+.article__content {
+  display: flex;
+  flex-direction: row;
+  column-gap: 50px;
+  margin: 100px;
+}
+
+.article__image {
+  width: 450px;
+  min-width: 450px;
+  position: relative;
+}
+
+.article__image img {
+  max-width: 100%;
+
+}
+
+.article__text {
+  font-size: 30px;
+  font-family: "PT Sans";
+  background-color: rgba(255,255,255,0.8);
+  padding: 50px;
+  width: auto;
+  border-radius: 0 0 100px 0;
+}
+
+.article__text h1 {
+  color: #065A93;
+  font-size: 40px;
+  font-family: "PT Sans";
+  text-align: left;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 50px;
+  letter-spacing: 0;
+}
+
+
+.article--inner {
+  background-image: url(../../assets/gres1/bg2.jpg);
+  padding-top: 0;
+}
+
+.article--inner .article__header img {
+  height: 47px;
+  margin-top: 26px;
+}
