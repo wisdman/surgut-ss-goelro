@@ -103,3 +103,7 @@
 
   color: var(--color-black-font);
 }
+
+figure {
+  margin-left: 0;
+}
