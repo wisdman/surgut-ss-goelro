@@ -1,0 +1,183 @@
+.screen-wrapper {
+  display: flex;
+  
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+
+  overflow: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.section-wrapper {
+  flex: 0 0 100%;
+  min-width: 100%;
+  max-width: 100%;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.image-wrapper {
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+} 
+
+.image-wrapper::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  height: 0; /* Remove scrollbar space */
+  background: transparent;  /* Make scrollbar invisible */
+}
+
+.link {
+  display: block;
+  outline: none;
+  position: absolute;
+}
+
+.link:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+img.index {
+  max-width: 100%;
+} 
+
+#link_1-1 {
+    top: 260px;
+    left: 197px;
+    width: 687px;
+    height: 490px;
+}
+
+#link_1-2 {
+    top: 806px;
+    left: 76px;
+    width: 442px;
+    height: 530px;
+}
+
+#link_1-3 {
+    top: 806px;
+    left: 569px;
+    width: 442px;
+    height: 530px;
+}
+
+#link_1-4 {
+    top: 1358px;
+    left: 197px;
+    width: 687px;
+    height: 490px;
+}
+
+#link_2-1 {
+    top: 192px;
+    left: 296px;
+    width: 484px;
+    height: 490px;
+}
+
+#link_2-2 {
+    top: 709px;
+    left: 76px;
+    width: 442px;
+    height: 584px;
+}
+
+#link_2-3 {
+    top: 783px;
+    left: 580px;
+    width: 442px;
+    height: 479px;
+}
+
+#link_2-4 {
+    top: 1344px;
+    left: 76px;
+    width: 454px;
+    height: 512px;
+}
+
+#link_2-5 {
+    top: 1297px;
+    left: 580px;
+    width: 442px;
+    height: 500px;
+}
+
+#link_3-1 {
+    top: 295px;
+    left: 80px;
+    width: 210px;
+    height: 407px;
+}
+
+#link_3-2 {
+    top: 295px;
+    left: 314px;
+    width: 212px;
+    height: 398px;
+}
+
+#link_3-3 {
+    top: 295px;
+    left: 551px;
+    width: 212px;
+    height: 350px;
+}
+
+#link_3-4 {
+    top: 295px;
+    left: 787px;
+    width: 212px;
+    height: 309px;
+}
+
+#link_3-5 {
+    top: 726px;
+    left: 80px;
+    width: 210px;
+    height: 303px;
+}
+
+#link_3-6 {
+    top: 717px;
+    left: 314px;
+    width: 212px;
+    height: 445px;
+}
+
+#link_3-7 {
+    top: 669px;
+    left: 551px;
+    width: 211px;
+    height: 458px;
+}
+
+#link_3-8 {
+    top: 627px;
+    left: 787px;
+    width: 211px;
+    height: 372px;
+}
+
+#link_3-9 {
+    top: 1052px;
+    left: 80px;
+    width: 211px;
+    height: 400px;
+}
+
+#link_3-10 {
+    top: 1023px;
+    left: 787px;
+    width: 211px;
+    height: 423px;
+}
