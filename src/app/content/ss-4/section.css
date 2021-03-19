@@ -6,3 +6,9 @@
   overflow: hidden;
   overflow-y: scroll;
 } 
+
+.image-wrapper::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  height: 0; /* Remove scrollbar space */
+  background: transparent;  /* Make scrollbar invisible */
+}
