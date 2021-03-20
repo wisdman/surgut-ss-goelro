@@ -85,7 +85,7 @@
   box-sizing: border-box;
   width: 100%;
   height: auto;
-  padding: 30px 130px;
+  padding: 30px 300px 30px 130px;
   pointer-events: none;
 }
 
@@ -111,4 +111,8 @@
 .content__article figure {
   margin-left: 0;
   margin-right: 0;
+}
+
+h1 {
+  font-size: 40px;
 }
